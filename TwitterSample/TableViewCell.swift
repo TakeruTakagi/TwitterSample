@@ -12,6 +12,7 @@ final class TableViewCell: UITableViewCell {
     static let reusaIdentifire = "TableViewCell"
     
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var tweetDate: UILabel!
     @IBOutlet weak var tweetLabel: UILabel!
     
     required init?(coder aDecorder: NSCoder) {
@@ -22,9 +23,10 @@ final class TableViewCell: UITableViewCell {
         return UINib(nibName: TableViewCell.reusaIdentifire, bundle: nil)
     }
     
-    func bind(nameLabel: String, TweetLabel: String) {
+    func bind(nameLabel: String, TweetLabel: String, tweetDate: Date) {
         self.nameLabel.text = nameLabel
         self.tweetLabel.text = TweetLabel
+        self.tweetDate.text = TweetLabel
     }
 
 }
